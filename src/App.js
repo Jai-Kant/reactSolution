@@ -1,26 +1,29 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Login from './components/Login';
+import Navbarx from './components/Navbarx';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component{
+  constructor(){
+    super();
+  }
+  handleSubmit=()=>{
+    console.log("Submitted");
+  }
+
+  render(){
+    return(
+      <React.Fragment>
+      <Navbarx />
+        <h1 style={{color:"green",fontFamily:"verdana"}}>Welcome to React</h1>
+        
+        <Login />
+        
+      
+      </React.Fragment>
+      )
+  }
 }
 
 export default App;
